@@ -76,7 +76,7 @@ app.use(express.urlencoded({ extended: false }));
 // express Session codes here
 app.use(
   session({
-    secret: "hello_world",
+    secret: process.env.EXPRESS_SESSION,
     resave: true,
     saveUninitialized: true,
     cookie: { maxAge: 6000000 },
